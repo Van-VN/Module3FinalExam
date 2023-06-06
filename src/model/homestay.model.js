@@ -32,7 +32,12 @@ class HomeStayModel extends BaseModel {
     homeDes
   ) {
     let sql = `UPDATE HOMESTAY
-        SET NAME=${homeName}, CITY=${homeCity}, BEDROOM=${homeBed}, RESTROOM=${homeRest}, PRICE=${homePrice}, DES=${homeDes}
+        SET NAME= '${homeName}', 
+        CITY= '${homeCity}', 
+        BEDROOM=${homeBed}, 
+        RESTROOM=${homeRest}, 
+        PRICE=${homePrice}, 
+        DES= '${homeDes}'
         WHERE ID =${id}`;
     return await this.querySql(sql);
   }

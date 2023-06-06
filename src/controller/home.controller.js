@@ -103,7 +103,9 @@ class HomeController extends BaseController {
           parsedData.homeStayBedroom,
           parsedData.homeStayPrice,
           parsedData.homeStayDes
-        );
+        ).catch((err) => {
+          console.log(err);
+        });
         res.writeHead(301, { Location: "/" });
         res.end();
       });
